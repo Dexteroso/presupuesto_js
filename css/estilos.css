@@ -169,20 +169,65 @@ body {
 
 .agregar_btn:focus { outline: none; }
 
-.contenedor {
-    width: 860px;
+.contenedor { 
+    width: 100vw; /*Se cambió de 860px a 100vw porque había se rompía el background al pasar los 860px*/
     margin: 60px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.ingreso {
-    float: left;
+.ingreso { /* Se quitaron los floats para poder hacerlos responsivos ya que el float y el flex no son compatibles*/
+    /* float: left; */
     width: 370px;
     margin-right: 70px;
 }
 
 .egreso {
-    float: left;
+    /* float: left; */
     width: 370px;
+}
+
+/* Responsive Styles */
+
+@media(max-width: 800px){
+.contenedor{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    gap: 30px;
+}
+    .ingreso,
+    .egreso {
+        width: 100vw;
+        padding: 0 20px;
+    }
+
+    .agregar_tipo{
+        margin: 0;
+    }
+
+    .agregar_contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+    .agregar_descripcion{
+        width: 250px;
+        margin: 0;
+    }
+
+    .agregar_valor{
+        width: 50px;
+        margin: 0;
+    }
+
+    .agregar_btn{
+        margin: 0;
+    }
 }
 
 h2 {
@@ -257,3 +302,5 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
+
+
