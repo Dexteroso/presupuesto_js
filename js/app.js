@@ -143,7 +143,8 @@ let valor = parseFloat(
             cargarCabecero();
             cargarEgresos();
         }
-        forma.reset();
+forma.reset();
+forma.valor.value = '$0.00';
     }
 };
 
@@ -180,4 +181,5 @@ document.addEventListener('DOMContentLoaded', () => {
       minimumFractionDigits: 2
     });
   });
+  
 });
