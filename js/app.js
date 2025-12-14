@@ -144,7 +144,7 @@ let valor = parseFloat(
             cargarEgresos();
         }
 forma.reset();
-forma.valor.value = '$0.00';
+// forma.valor.value = '$0.00';
     }
 };
 
@@ -154,32 +154,32 @@ const cargarApp = () => {
     cargarEgresos();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const valorInput = document.getElementById('valor');
-  if (!valorInput) return;
+// document.addEventListener('DOMContentLoaded', () => {
+//   const valorInput = document.getElementById('valor');
+//   if (!valorInput) return;
 
-  // Valor inicial
-  valorInput.value = '$0.00';
+//   // Valor inicial
+//   valorInput.value = '$0.00';
 
-  valorInput.addEventListener('input', () => {
-    // 1. Quitar todo excepto números
-    let raw = valorInput.value.replace(/\D/g, '');
+//   valorInput.addEventListener('input', () => {
+//     // 1. Quitar todo excepto números
+//     let raw = valorInput.value.replace(/\D/g, '');
 
-    // 2. Si está vacío
-    if (raw === '') {
-      valorInput.value = '$0.00';
-      return;
-    }
+//     // 2. Si está vacío
+//     if (raw === '') {
+//       valorInput.value = '$0.00';
+//       return;
+//     }
 
-    // 3. Convertir a número con 2 decimales
-    let number = parseInt(raw, 10) / 100;
+//     // 3. Convertir a número con 2 decimales
+//     let number = parseInt(raw, 10) / 100;
 
-    // 4. Formatear como moneda MXN
-    valorInput.value = number.toLocaleString('es-MX', {
-      style: 'currency',
-      currency: 'MXN',
-      minimumFractionDigits: 2
-    });
-  });
+//     // 4. Formatear como moneda MXN
+//     valorInput.value = number.toLocaleString('es-MX', {
+//       style: 'currency',
+//       currency: 'MXN',
+//       minimumFractionDigits: 2
+//     });
+//   });
   
-});
+// });
