@@ -99,12 +99,26 @@ body {
     margin-left: 10px;
 }
 
-.presupuesto_egreso--porcentaje {
-    background-color: rgba(255, 255, 255, 0.2);
+/* .presupuesto_egreso--porcentaje {
+   background-color: rgba(255, 255, 255, 0.2); 
     text-align: center;
     border-radius: 3px;
+} */
+
+.derecha .presupuesto_egreso--porcentaje{
+    float: left;
+    margin-left: 7px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3px;
+    border-radius: 3px;
+    width: 45px;
+    text-align: center;
 }
 
+.presupuesto_egreso--valor {
+    padding: 3px 0;
+}
 
 .agregar {
     padding: 14px;
@@ -257,9 +271,9 @@ h2 {
     transition: transform 0.3s;
 }
 
-.elemento_porcentaje {
+.egreso .elemento_porcentaje {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     transition: transform 0.3s;
     font-size: 11px;
     background-color: #FFDAD9;
@@ -269,14 +283,27 @@ h2 {
     text-align: center;
 }
 
+.ingreso .elemento_porcentaje {
+    float: left;
+    margin-left: 10px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #d9ffe0;
+    padding: 3px;
+    border-radius: 3px;
+    width: 45px;
+    text-align: center;
+}
+
 .ingreso .elemento_valor,
-.ingreso .elemento_eliminar--btn {
+.ingreso .elemento_porcentaje,
+.ingreso ion-icon{
     color: #28B9B5;
 }
 
 .egreso .elemento_valor,
 .egreso .elemento_porcentaje,
-.egreso .elemento_eliminar--btn {
+.egreso ion-icon{
     color: #FF5049;
 }
 
@@ -302,5 +329,4 @@ h2 {
 .elemento:hover .elemento_eliminar--btn { display: block; }
 .elemento:hover .elemento_valor { transform: translateX(-20px); }
 .elemento:hover .elemento_porcentaje { transform: translateX(-20px); }
-
 
